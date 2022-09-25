@@ -8,7 +8,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { useDispatch, useSelector } from 'react-redux';
-import { loadUsers, UserDelete } from '../redux/action';
+import { loadUsers, userDelete } from '../redux/action';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import { useNavigate } from 'react-router-dom';
@@ -39,14 +39,17 @@ const Home = () => {
     const navigate = useNavigate();
 
     const data = useSelector((state) => state.data.users)
-    // console.log("data", data);
+    console.log("data", data);
     useEffect(() => {
         dispatch(loadUsers());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    // const handleDelete = (id) => {
-    //     dispatch(UserDelete(id))
-    // }
+    const handleDelete = (id) => {
+      if (window.confirm("Are you wanted to delete the user ?")) {
+        dispatch(userDelete(id))
+      }
+    }
     return (
         <div>
             <div style={{marginTop:60,textAlign:'end',marginRight:35}}>
@@ -76,8 +79,8 @@ const Home = () => {
                                 <StyledTableCell align="center">{user.address}</StyledTableCell>
                                 <StyledTableCell align="center">
                                     <ButtonGroup variant="contained" aria-label="contained button">
-                                        {/* <Button style={{ marginRight: '5px' }} color="error" onClick={() => handleDelete(user.id)}>Delete</Button> */}
-                                        {/* <Button onClick={() => navigate(`editUser/${user.id}`)}>Edit</Button> */}
+                                        <Button style={{ marginRight: '5px' }} color="error" onClick={() => handleDelete(user.id)}>Delete</Button>
+                                        <Button onClick={() => navigate(`editUser/${user.id}`)}>Edit</Button>
                                         <Button></Button>
                                     </ButtonGroup>
                                 </StyledTableCell>

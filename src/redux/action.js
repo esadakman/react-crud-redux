@@ -9,7 +9,7 @@ const addUser = () => ({
     type: ADD_USER,
 })
 
-const deleteUser = () => ({
+const userDeleted = () => ({
     type: DELETE_USERS
 })
 
@@ -22,16 +22,16 @@ export const loadUsers = () => {
     }
 }
 
-export const UserDelete = (id) => {
+export const userDelete = (id) => {
     return dispatch => {
         return axios.delete(`${process.env.REACT_APP_API}/${id}`).then((resp) => {
             // console.log("resp",resp)
-            dispatch(deleteUser());
+            dispatch(userDeleted());
             dispatch(loadUsers())
         }).catch((error) => console.log("delete", error))
     }
 }
-export const Useradd = (userdata) => {
+export const userAdd = (userdata) => {
     return dispatch => {
         return axios.post(`${process.env.REACT_APP_API}`,userdata).then((resp) => {
             // console.log("resp",resp)
