@@ -1,0 +1,25 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Michael",
+      "address": "Scranton",
+      "email": "e@gmail.com",
+      "contact": 90500000000
+    },
+    {
+      "id": 2,
+      "name": "Jim",
+      "address": "Philadelphia",
+      "email": "jim@gmail.com",
+      "contact": 90544102356
+    },
+    {
+      "id": 3,
+      "name": "Dwight",
+      "address": "Berlin",
+      "email": "kurt@gmail.com",
+      "contact": 90512312312
+    }
+  ]
+}
