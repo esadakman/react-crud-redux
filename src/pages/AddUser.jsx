@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 import { useDispatch } from "react-redux";
-import { userAdd } from "../redux/action";
+import { addUser } from "../redux/action";
 import { useNavigate } from "react-router-dom";
 
 const AddUser = () => {
@@ -24,7 +24,7 @@ const AddUser = () => {
     if (!name || !email || !contact || !address) {
       setError("Please input all field");
     } else {
-      dispatch(userAdd(state));
+      dispatch(addUser(state));
       navigate("/");
       setError("");
     }
@@ -41,6 +41,7 @@ const AddUser = () => {
         style={{ width: 100 }}
         variant="contained"
         onClick={() => navigate("/")}
+        color="warning"
       >
         Back
       </Button>

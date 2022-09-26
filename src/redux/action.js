@@ -5,7 +5,7 @@ const getUsers = (users) => ({
     type: GET_USERS,
     payload: users,
 })
-const addUser = () => ({
+const userAdd = () => ({
     type: ADD_USER,
 })
 
@@ -31,11 +31,11 @@ export const userDelete = (id) => {
         }).catch((error) => console.log("delete", error))
     }
 }
-export const userAdd = (userdata) => {
+export const addUser = (user) => {
     return dispatch => {
-        return axios.post(`${process.env.REACT_APP_API}`,userdata).then((resp) => {
+        return axios.post(`${process.env.REACT_APP_API}`,user).then((resp) => {
             // console.log("resp",resp)
-            dispatch(addUser());
+            dispatch(userAdd());
             dispatch(loadUsers())
         }).catch((error) => console.log("delete", error))
     }
