@@ -38,8 +38,8 @@ const Home = () => {
     let dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const data = useSelector((state) => state.users.user)
-    console.log("data", data);
+    const {users} = useSelector((state) => state.data)
+    // console.log(data);
     useEffect(() => {
         dispatch(loadUsers());
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -68,7 +68,7 @@ const Home = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {data && data.map((user, index) => (
+                        {users && users.map((user, index) => (
                             <StyledTableRow key={user.id}>
                                 <StyledTableCell component="th" scope="row">
                                     {index + 1}

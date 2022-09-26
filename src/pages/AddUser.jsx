@@ -13,7 +13,7 @@ const AddUser = () => {
     contact: "",
     address: "",
   });
-  console.log("statestate", state);
+  // console.log("statestate", state);
   const [error, setError] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
