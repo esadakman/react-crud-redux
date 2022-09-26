@@ -22,7 +22,7 @@ const AddUser = () => {
 
   const handleSubmit = () => {
     if (!name || !email || !contact || !address) {
-      setError("Please input all field");
+      setError("Please fill out all fields");
     } else {
       dispatch(addUser(state));
       navigate("/");
@@ -57,7 +57,7 @@ const AddUser = () => {
         autoComplete="off"
       >
         <TextField
-          id="outlined-basic"
+          id="standard-basic"
           label="Name"
           value={name}
           type="text"
@@ -66,7 +66,7 @@ const AddUser = () => {
         />
         <br />
         <TextField
-          id="filled-basic"
+          id="standard-basic"
           label="Email"
           value={email}
           type="email"

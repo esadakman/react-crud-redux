@@ -38,7 +38,7 @@ const Home = () => {
     let dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const data = useSelector((state) => state.data.users)
+    const data = useSelector((state) => state.users.user)
     console.log("data", data);
     useEffect(() => {
         dispatch(loadUsers());
@@ -52,11 +52,11 @@ const Home = () => {
     }
     return (
         <div>
-            <div style={{marginTop:60,textAlign:'end',marginRight:35}}>
+            <div style={{margin:20,textAlign:'end',marginRight:35}}>
                 <Button variant="contained" onClick={() => navigate('addUser')}>User Add</Button>
             </div>
             <TableContainer component={Paper}>
-                <Table style={{ marginTop: 30 }} sx={{ minWidth: 900 }} aria-label="customized table">
+                <Table  sx={{ minWidth: 900 }} aria-label="customized table">
                     <TableHead>
                         <TableRow>
                             <StyledTableCell>Index</StyledTableCell>
@@ -80,8 +80,7 @@ const Home = () => {
                                 <StyledTableCell align="center">
                                     <ButtonGroup variant="contained" aria-label="contained button">
                                         <Button style={{ marginRight: '5px' }} color="error" onClick={() => handleDelete(user.id)}>Delete</Button>
-                                        <Button onClick={() => navigate(`editUser/${user.id}`)}>Edit</Button>
-                                        <Button></Button>
+                                        <Button onClick={() => navigate(`editUser/${user.id}`)}>Edit</Button> 
                                     </ButtonGroup>
                                 </StyledTableCell>
                             </StyledTableRow>
