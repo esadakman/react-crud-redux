@@ -1,4 +1,4 @@
-# react-crud-app
+# react-crud-redux 
 
 ## Objective
 
@@ -12,7 +12,7 @@ Build a Redux Crud App using ReactJS.
 
 ## Project Link
 
-#### You can reach my project from [here]() 👈
+#### I did not deploy the project due to local JSON server 
 
 ## Project Skeleton
 
@@ -59,8 +59,8 @@ To run this project;
 - After that you can run the project as usual =>
 
 ```
-$ git clone https://github.com/esadakman/react-crud-app
-$ cd ./react-crud-app
+$ git clone https://github.com/esadakman/react-crud-redux 
+$ cd ./react-crud-redux 
 $ npm install / yarn
 $ npm start / yarn start
 ```
