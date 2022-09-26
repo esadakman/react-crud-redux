@@ -52,9 +52,7 @@ const Home = () => {
     }
     return (
         <div>
-            <div style={{margin:20,textAlign:'end',marginRight:35}}>
-                <Button variant="contained" onClick={() => navigate('addUser')}>User Add</Button>
-            </div>
+            
             <TableContainer component={Paper}>
                 <Table  sx={{ minWidth: 900 }} aria-label="customized table">
                     <TableHead>
@@ -88,6 +86,9 @@ const Home = () => {
                     </TableBody>
                 </Table>
             </TableContainer>
+            <div style={{margin:20,textAlign:'end',marginRight:45}}>
+                <Button variant="contained" onClick={() => navigate('addUser')}>Add User</Button>
+            </div>
         </div>
     )
 }

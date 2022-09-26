@@ -37,14 +37,7 @@ const AddUser = () => {
 
   return (
     <div style={{ marginTop: 50 }}>
-      <Button
-        style={{ width: 100 }}
-        variant="contained"
-        onClick={() => navigate("/")}
-        color="warning"
-      >
-        Back
-      </Button>
+      
 
       <h2>Add User</h2>
       <p>{error && <p style={{ color: "red" }}>{error}</p>}</p>
@@ -99,6 +92,14 @@ const AddUser = () => {
         >
           Submit
         </Button>
+        <Button
+        style={{ width: 100 }}
+        variant="contained"
+        onClick={() => navigate("/")}
+        color="error"
+      >
+        Back
+      </Button>
       </Box>
     </div>
   );

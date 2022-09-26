@@ -51,13 +51,7 @@ const EditUser = () => {
 
   return (
     <div style={{ marginTop: 50 }}>
-      <Button
-        style={{ width: 100 }}
-        variant="contained"
-        onClick={() => navigate("/")}
-      >
-        Back
-      </Button>
+      
 
       <h2>Edit User</h2>
       <p>{error && <p style={{ color: "red" }}>{error}</p>}</p>
@@ -112,6 +106,14 @@ const EditUser = () => {
         >
           Update
         </Button>
+        <Button
+        style={{ width: 100 }}
+        variant="contained"
+        onClick={() => navigate("/")}
+        color='error'
+      >
+        Back
+      </Button>
       </Box>
     </div>
   );
