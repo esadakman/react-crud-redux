@@ -59,7 +59,7 @@ To run this project;
 - After that you can run the project as usual =>
 
 ```
-$ git clone https://github.com/esadakman/react-crud-redux 
+$ git clone https://github.com/esadakman/reactjs-redux-crud.git
 $ cd ./react-crud-redux 
 $ npm install / yarn
 $ npm start / yarn start
