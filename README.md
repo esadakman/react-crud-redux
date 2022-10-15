@@ -49,6 +49,8 @@ SOLUTION
 - CSS
 - JS
 - ReactJS 
+- Redux
+- Redux-Thunk 
 - Material-UI
 
 To run this project;
